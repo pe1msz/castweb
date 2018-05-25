@@ -12,7 +12,7 @@ for found in $FIRMWARE
 do
   echo "Found $found firmware..."
   # take action on each file. $f store current file name
-  /usr/bin/avrdude -p m328p -c arduino -P /dev/ttyS2 -b 115200 -F -U flash:w:${found} -v 
+  /usr/bin/cast-avrdude -p m328p -c arduino -P /dev/ttyS2 -b 115200 -F -U flash:w:${found} -v 
  
   # Output some advice
   mv ${found} ./dvmega/backup
