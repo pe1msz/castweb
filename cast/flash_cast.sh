@@ -11,10 +11,10 @@ FIRMWARE=./cast/*.bin
 for found in $FIRMWARE
 do
   echo "Found $found firmware..."
-  # take action on each file. $f store current file name
+  # take action on this file, upload it to mainboard.
   sudo stm32flash -v -w ${found} /dev/ttyAMA0 -R -i -67,67:-67,67
 
-  # Output some advice
-  mv ${found} nextion/backup
+  # Make a backup of the uploaded FW to backup-folder, and reboot afterwards.
+  mv ${found} cast/backup
   sudo reboot
 done
