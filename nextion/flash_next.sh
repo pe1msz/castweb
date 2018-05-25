@@ -8,6 +8,7 @@ systemctl stop mmdvmhost.service
 
 sudo mount -o remount,rw /
 
+# firmware received in zip-format, unzip and continue
 UPLOADED=./nextion/*.zip
 for zipped in $UPLOADED
 do
@@ -19,10 +20,11 @@ FIRMWARE=./nextion/*.tft
 for found in $FIRMWARE
 do
   echo "Found $found firmware..."
-  # take action on each file. $f store current file name
+  # Firmware found, uploading with python-script.
+  # pythonupload has been modified!!
   python ./nextion/nextionupload.py /dev/ttyAMA0 NX3224T024 ${found}
 
-  # Output some advice
+  # move to backup folder, and reboot
   mv ./nextion/*.tft ./nextion/backup
   mv ./nextion/*.zip ./nextion/backup
   sudo /usr/bin/myreset
