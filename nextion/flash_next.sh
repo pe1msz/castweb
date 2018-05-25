@@ -27,6 +27,7 @@ do
   # move to backup folder, and reboot
   mv ./nextion/*.tft ./nextion/backup
   mv ./nextion/*.zip ./nextion/backup
-  sudo /usr/bin/myreset
+  # to make it work, reset mainboard, and reboot afterwards.
+  sudo /usr/bin/cast-reset
   sudo reboot
 done
