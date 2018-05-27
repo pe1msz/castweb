@@ -1,1 +1,1 @@
-sudo chuser -R -g www-data:www-data ../fw/* 
+sudo chown -R www-data:www-data ../fw/* 
