@@ -12,7 +12,7 @@ sudo mv /var/www/dashboard/admin/castweb/*  /var/www/dashboard/admin/
 sudo rm -r /var/www/dashboard/admin/castweb
 sudo chown -R www-data:www-data /var/www/dashboard/admin/fw
 sudo chmod +x /var/www/dashboard/admin/fw/dvmega/flash_mega.sh
-sudo chmod +x /var/www/dashboard/admin/fw/dvmega/flash_cast.sh
-sudo chmod +x /var/www/dashboard/admin/fw/dvmega/flash_next.sh
+sudo chmod +x /var/www/dashboard/admin/fw/cast/flash_cast.sh
+sudo chmod +x /var/www/dashboard/admin/fw/nextion/flash_next.sh
 cd /var/www/dashboard/admin/fw/pyserial-3.2.1 
 sudo python setup.py install
