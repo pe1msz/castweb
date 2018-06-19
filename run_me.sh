@@ -7,7 +7,7 @@ sudo chmod +x /usr/bin/cast-avrdude
 sudo chmod +x /usr/bin/cast-reset
 sudo chmod +x /usr/bin/cast-fan
 sudo chmod +x /usr/bin/cast-enable.sh
-sudo git clone https://github.com/pe1msz/castweb /var/www/dashboard/admin/myDV-nano
+sudo git clone https://github.com/pe1msz/castweb /var/www/dashboard/admin/castweb
 sudo mv /var/www/dashboard/admin/castweb/*  /var/www/dashboard/admin/
 sudo rm -r /var/www/dashboard/admin/castweb
 sudo chown -R www-data:www-data /var/www/dashboard/admin/fw
