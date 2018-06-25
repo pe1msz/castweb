@@ -6,7 +6,7 @@ systemctl stop dstarrepeater.timer
 systemctl stop mmdvmhost.timer
 systemctl stop mmdvmhost.service
 
-#sudo mount -o remount,rw /
+sudo mount -o remount,rw /
 FIRMWARE=./dvmega/*.hex
 for found in $FIRMWARE
 do
@@ -15,6 +15,6 @@ do
   /usr/bin/cast-avrdude -p m328p -c arduino -P /dev/ttyS2 -b 115200 -F -U flash:w:${found} -v 
  
   # move to backup-folder, and reboot the unit
-  mv ${found} ./dvmega/backup
+  sudo mv ${found} ./dvmega/backup
   sudo reboot
 done
