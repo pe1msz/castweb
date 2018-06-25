@@ -25,8 +25,8 @@ do
   python ./nextion/nextionupload.py /dev/ttyAMA0 NX3224T024 ${found}
 
   # move to backup folder, and reboot
-  mv ./nextion/*.tft ./nextion/backup
-  mv ./nextion/*.zip ./nextion/backup
+  sudo mv ./nextion/*.tft ./nextion/backup
+  sudo mv ./nextion/*.zip ./nextion/backup
   # to make it work, reset mainboard, and reboot afterwards.
   sudo /usr/bin/cast-reset
   sudo reboot
