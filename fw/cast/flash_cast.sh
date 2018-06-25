@@ -15,6 +15,6 @@ do
   sudo stm32flash -v -w ${found} /dev/ttyAMA0 -R -i -67,67:-67,67
 
   # Make a backup of the uploaded FW to backup-folder, and reboot afterwards.
-  mv ${found} cast/backup
+  sudo mv ${found} cast/backup
   sudo reboot
 done
