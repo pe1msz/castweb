@@ -7,6 +7,15 @@ systemctl stop mmdvmhost.timer
 systemctl stop mmdvmhost.service
 
 sudo mount -o remount,rw /
+
+# firmware received in zip-format, unzip and continue
+UPLOADED=./cast/*.zip
+for zipped in $UPLOADED
+do
+       sudo unzip -o ${zipped} -d ./cast
+done
+
+
 FIRMWARE=./cast/*.bin
 for found in $FIRMWARE
 do
@@ -16,5 +25,6 @@ do
 
   # Make a backup of the uploaded FW to backup-folder, and reboot afterwards.
   sudo mv ${found} cast/backup
+  sudo mv ./cast/*.zip ./cast/backup
   sudo reboot
 done
