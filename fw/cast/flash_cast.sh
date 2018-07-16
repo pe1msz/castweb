@@ -16,7 +16,7 @@ do
 done
 
 
-FIRMWARE=./cast/*.bin
+FIRMWARE=./cast/*.hex
 for found in $FIRMWARE
 do
   echo "Found $found firmware..."
