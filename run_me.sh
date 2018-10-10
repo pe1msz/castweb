@@ -7,11 +7,8 @@ sudo chmod +x /usr/bin/cast-avrdude
 sudo chmod +x /usr/bin/cast-reset
 sudo chmod +x /usr/bin/cast-fan
 sudo git clone https://github.com/pe1msz/castweb /var/www/dashboard/admin/castweb
-sudo mv /var/www/dashboard/configure.php /var/www/dashboard/configure_org.php
 sudo mv /var/www/dashboard/admin/castweb/*  /var/www/dashboard/admin/
 sudo rm -r /var/www/dashboard/admin/castweb
-sudo chown -R www-data:www-data /var/www/dashboard/admin/configure.php
-sudo chmod +x /var/www/dashboard/admin/configure.php
 sudo chown -R www-data:www-data /var/www/dashboard/admin/fw
 sudo chmod +x /var/www/dashboard/admin/fw/dvmega/flash_mega.sh
 sudo chmod +x /var/www/dashboard/admin/fw/cast/flash_cast.sh
