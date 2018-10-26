@@ -29,5 +29,5 @@ do
   sudo mv ./nextion/*.zip ./nextion/backup
   # to make it work, reset mainboard, and reboot afterwards.
   sudo /usr/bin/cast-reset
-  sudo reboot
+  # sudo reboot
 done

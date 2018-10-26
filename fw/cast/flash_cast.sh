@@ -26,5 +26,5 @@ do
   # Make a backup of the uploaded FW to backup-folder, and reboot afterwards.
   sudo mv ${found} cast/backup
   sudo mv ./cast/*.zip ./cast/backup
-  sudo reboot
+  # sudo reboot
 done

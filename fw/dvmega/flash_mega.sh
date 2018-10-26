@@ -16,5 +16,5 @@ do
  
   # move to backup-folder, and reboot the unit
   sudo mv ${found} ./dvmega/backup
-  sudo reboot
+  # sudo reboot
 done
