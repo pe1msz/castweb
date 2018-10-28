@@ -28,34 +28,59 @@ require_once('../config/version.php');
   </head>
   <body>
   <div class="container">
-  <?php include './header-menu.inc'; ?>
-  <div class="contentwide">
+  <?php include './header-upgrade.inc'; ?>
+  <div class="contentwide">  
+<form action="upload_main.php" method="post" enctype="multipart/form-data">
 
-  <table width="100%">
-    <tr><th>Your update has been done</th></tr>
-    <tr><td align="center">
-		<h2>***UPDATE HAS BEEN PROCESSED***</h2>
-		<b>Your unit has been updated, and will reboot now. </b>
-		<b>We will revert to the dashboard in 50 seconds. </b>
+   <table>
+  <tr>
+	<h3>DVMEGA-Cast Mainboard</h3>
+  </tr> 
+  <tr>
+	<center>Select Firmware-file to upload to the DVMEGA-Cast unit<BR><BR></center>
+	<center><input type="file" name="fileToUpload" id="fileToUpload"><BR><BR></center>
+        <center><input type="submit" value="Upload Firmware" name="submit"><BR><BR></center>
+  </tr>
+     <th><BR></th>
+	</table>
 
+</form>
 
+<form action="upload_display.php" method="post" enctype="multipart/form-data">
+   <table>
+  <tr>
+        <h3>DVMEGA-Cast Display</h3>
+  </tr>
+  <tr>
+        <center>Select Firmware-file to upload to the DVMEGA-Cast Display<BR><BR></center>
+        <center><input type="file" name="fileToUpload" id="fileToUpload"><BR><BR></center>
+        <center><input type="submit" value="Upload Firmware" name="submit"><BR><BR></center>
+  </tr>
+     <th><BR></th>
+        </table>
 
-               <script language="JavaScript" type="text/javascript">
-                                setTimeout("location.href = \'/index.php\'",50000);
-                        </script> 
-  </table>
-</div>
-<?php 
-           system('sudo mount -o remount,ro / > /dev/null &');
-                exec('sleep 5 && sudo shutdown -r now > /dev/null &');
+</form>
+<form action="upload_radio.php" method="post" enctype="multipart/form-data">
+   <table>
+  <tr>
+        <h3>DVMEGA-Cast hotsport Radio-board</h3>
+  </tr>
+  <tr>
+        <center>Select Firmware-file to upload to the DVMEGA-Cast hotspot radioboard<BR><BR></center>
+        <center><input type="file" name="fileToUpload" id="fileToUpload"><BR><BR></center>
+        <center><input type="submit" value="Upload Firmware" name="submit"><BR><BR></center>
+  </tr>
+     <th><BR></th>
+        </table>
 
-?>
+</form>
 <div class="footer">
 Pi-Star / Pi-Star Dashboard, &copy; Andy Taylor (MW0MWZ) 2014-<?php echo date("Y"); ?>.<br />
 ircDDBGateway Dashboard by Hans-J. Barthen (DL5DI),<br />
 MMDVMDash developed by Kim Huebel (DG9VH), <br />
 Need help? Click <a style="color: #ffffff;" href="https://www.facebook.com/groups/pistar/" target="_new">here for the Support Group</a><br />
 Get your copy of Pi-Star from <a style="color: #ffffff;" href="http://www.pistar.uk/downloads/" target="_new">here</a>.<br />
+</div>
 
 </div>
 </body>

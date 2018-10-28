@@ -23,39 +23,48 @@ require_once('../config/version.php');
     <meta http-equiv="pragma" content="no-cache" />
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <meta http-equiv="Expires" content="0" />
-    <title>Pi-Star - Digital Voice Dashboard - Update is Ready</title>
+    <title>Pi-Star - Digital Voice Dashboard - Confirm the update</title>
     <link rel="stylesheet" type="text/css" href="../css/pistar-css.php" />
   </head>
   <body>
   <div class="container">
-  <?php include './header-menu.inc'; ?>
-  <div class="contentwide">
+  <?php include './header-confirm.inc'; ?>
+  <div class="contentwide"> 
+<body>
+  <div class="container">
+    <form action="confirm_main.php" method="post" enctype="multipart/form-data">
+    <p>
+	<center>Please push the volumeknob, and click the button to update the Display.</center>
+	 <table>
+		<tr>
+			<h1> </h1> 
+		</tr>
+	    <tr>
+	  	<center> <button name="button">Run Upgrade</button> </center>
+	    </tr>
+		<tr> 
+			<h1> </h1>
+		</tr>
+		    <tr>
+	   		<center>Please keep the volumeknop pressed for 15 sec.</BR> </center>
+     	    
+                         <center>Once the light in the speaker dims, you can release it</BR> </center> 
+            
+                 <center>As soon as the update finishes, the unit restarts</center>
+		</tr>		
 
-  <table width="100%">
-    <tr><th>Your update has been done</th></tr>
-    <tr><td align="center">
-		<h2>***UPDATE HAS BEEN PROCESSED***</h2>
-		<b>Your unit has been updated, and will reboot now. </b>
-		<b>We will revert to the dashboard in 50 seconds. </b>
-
-
-
-               <script language="JavaScript" type="text/javascript">
-                                setTimeout("location.href = \'/index.php\'",50000);
-                        </script> 
-  </table>
-</div>
-<?php 
-           system('sudo mount -o remount,ro / > /dev/null &');
-                exec('sleep 5 && sudo shutdown -r now > /dev/null &');
-
-?>
+	  </table>
+	</p>
+    </form>
+  <div class="/container">
+</body>
 <div class="footer">
 Pi-Star / Pi-Star Dashboard, &copy; Andy Taylor (MW0MWZ) 2014-<?php echo date("Y"); ?>.<br />
 ircDDBGateway Dashboard by Hans-J. Barthen (DL5DI),<br />
 MMDVMDash developed by Kim Huebel (DG9VH), <br />
 Need help? Click <a style="color: #ffffff;" href="https://www.facebook.com/groups/pistar/" target="_new">here for the Support Group</a><br />
 Get your copy of Pi-Star from <a style="color: #ffffff;" href="http://www.pistar.uk/downloads/" target="_new">here</a>.<br />
+</div>
 
 </div>
 </body>
