@@ -17,7 +17,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-	include("confirm.html");
+	include("confirm_main.html");
      } else {
         echo "Sorry, there was an error uploading your file.";
     }
