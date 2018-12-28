@@ -74,6 +74,7 @@ require_once('../config/version.php');
         </table>
 
 </form>
+</div>
 <div class="footer">
 Pi-Star / Pi-Star Dashboard, &copy; Andy Taylor (MW0MWZ) 2014-<?php echo date("Y"); ?>.<br />
 ircDDBGateway Dashboard by Hans-J. Barthen (DL5DI),<br />
