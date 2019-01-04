@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo rpi-rw
+sudo mount -o remount,rw /
 sudo git clone https://github.com/pe1msz/castbin /usr/bin/castbin
 sudo mv /usr/bin/castbin/* /usr/bin/. 
 sudo rm -r /usr/bin/castbin
