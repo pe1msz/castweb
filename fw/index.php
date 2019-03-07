@@ -70,7 +70,22 @@ require_once('../config/version.php');
         <center><input type="file" name="fileToUpload" id="fileToUpload"><BR><BR></center>
         <center><input type="submit" value="Upload Firmware" name="submit"><BR><BR></center>
   </tr>
+        
+     <th><BR></th>
         </table>
+
+</form>
+<form action="../cast_update_pages.php" method="post" enctype="multipart/form-data">
+   <table>
+  <tr>
+        <h3>Update the update pages</h3>
+  </tr>
+  <tr>
+        <center>We do add update features once in a while, click to update<BR><BR></center>
+        <center><input type="submit" value="Update Update-pages" name="submit"><BR><BR></center>
+  </tr>
+        </table>		
+		
 
 </form>
 </div>
