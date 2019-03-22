@@ -37,7 +37,8 @@ require_once('../config/version.php');
 	<h3>DVMEGA-Cast Mainboard</h3>
   </tr> 
   <tr>
-	<center>Select Firmware-file to upload to the DVMEGA-Cast unit<BR><BR></center>
+	<center>Select Firmware-file to upload to the DVMEGA-Cast unit</center>
+	<center>DO NOT UNZIP THE FILE, UPLOAD AS IS<BR><BR></center>
 	<center><input type="file" name="fileToUpload" id="fileToUpload"><BR><BR></center>
         <center><input type="submit" value="Upload Firmware" name="submit"><BR><BR></center>
   </tr>
@@ -52,7 +53,8 @@ require_once('../config/version.php');
         <h3>DVMEGA-Cast Display</h3>
   </tr>
   <tr>
-        <center>Select Firmware-file to upload to the DVMEGA-Cast Display<BR><BR></center>
+        <center>Select Firmware-file to upload to the DVMEGA-Cast Display</center>
+		<center>DO NOT UNZIP THE FILE, UPLOAD AS IS<BR><BR></center>
         <center><input type="file" name="fileToUpload" id="fileToUpload"><BR><BR></center>
         <center><input type="submit" value="Upload Firmware" name="submit"><BR><BR></center>
   </tr>
